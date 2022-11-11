@@ -28,3 +28,15 @@ In c when you are doing operations to return a float, at least one element need 
 
 - Global variables:
 - Local variables: Passed by value. The callee receive a copy of the variable not the variable itself. To solve this issue if we would like to overwrite a variable is to redefine the value in the main.
+
+
+### Arrays:
+ Type of data structures. Used to value of the same data types.
+ Arrays are passed by reference, not by value.
+ Practice what get printed out ?
+ 
+ 
+ ### CLI arguments
+ 
+ int argc
+ string arcv[]: array of strings

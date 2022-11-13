@@ -72,7 +72,36 @@ For i = 0, i < n-1;
   ## Bubble sort:
   
   Repeat until sorted:
-  for i from 0 to n-2:
-    if i'th and i+'th element out of order:
-      swap them
+    for i from 0 to n-2:
+      if i'th and i+'th element out of order:
+        swap them
+    if no swap:
+      quit
+      
+ Upper bound:  Big O : O(n^2)
+  uper bound: Omega(n)
+  
+  ## Recursion:
+  
+  A function calling itself. But we need base case. 
+  
+  ## Merge sort: 
+  
+  if only one number:
+    quit
+  sort left half of numbers
+  sort right of numbers
+  marrge sorted halves
+  
+  lower bound : O(n log n)
+  
+  upper bound : Omega (n log n)
+  
+  
+  When an alogirthm has the same upper bound and lower bound we use the notation Teta
+  
+  Selection sort : Teta(n^2)
+  merge sort: Teta(n log n)
+  
+  
   

@@ -32,3 +32,16 @@ input(voter, rank, name):
       return true
   return false;
   ```
+  
+  
+### tabulate function:
+
+
+```
+loop through the list of voters [i]:
+
+loop through the list of preferences [j] of voters [i]:
+  
+  if that preference is eliminate: continue
+  else if the candidate is not eliminated: add a vote to that candidate
+```

@@ -105,3 +105,11 @@ For i = 0, i < n-1;
   
   
   
+  ## Problem Sets
+  
+  
+  ### Plurality:
+  
+  Problem with plurality. If there is a tie it will be hard to determine the winner.
+ 
+ ### Runoff

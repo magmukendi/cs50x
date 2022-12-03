@@ -35,3 +35,4 @@ When a function is called it will pushed in the stack. When a function is execut
 fopen(): for opening a file
 fgetc(): for reading a file
 fputc(): to writes or append a character in a file
+fread(<buffer>, <size>, <qty>, <file pointer>): This one reads the quantity of units of size (s) from the file pointed to and stores them in memory in a buffer (usually an array) pointer to by <buffer>

@@ -53,3 +53,18 @@ Other file pointer commands:
 - ftell(): tells you at what(byte) position you are at within a file.
 - feof(): tells if I have read to the end of a file
 - ferror(): indicates whether an error occured in working with a file.
+  
+  
+  
+  
+  2022.12.04:
+  
+  Today I was solving the filter problem set. And I came accross a very interesting problem: Sobel Operator.
+  
+  
+  It is used in image processing and computer vision, particularly within edge detection algortithms where it creates and image emphasising on edges.
+  
+  
+  
+  
+  I also started workign on the recover  provblem set. Which is a problem in which I try to recover the JPEGs from a forensic image.

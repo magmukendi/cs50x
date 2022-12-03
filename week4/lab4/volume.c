@@ -1,9 +1,54 @@
-// in this program I will modify the bvolume of an audio file.
+// Modifies the volume of an audio file
 
-// Each audio file starts with a44-byt long header that contains info about the file, the size of the file, the number of samples per second, and the size of each sample.
-//After the header the file contains a sequence of samples, each sample has 2-byte integer representing the audio signal at a particular point in time.
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-//scaling each sample will result into changing the volume of the audio. Multiplying each sample value by 2.0 will double the volume of the origin audio. and multiplying the same file by 0.5 will cut the volume by half.
+// Number of bytes in .wav header
+const int HEADER_SIZE = 44;
 
-// we will use the uint8_t type  for dealing with the byte of the file's header.
-// we will use the uint16_t for dealing with the sample of the audio file.
+int main(int argc, char *argv[])
+{
+    // Check command-line arguments
+    if (argc != 4)
+    {
+        printf("Usage: ./volume input.wav output.wav factor\n");
+        return 1;
+    }
+
+    // Open files and determine scaling factor
+    FILE *input = fopen(argv[1], "r");
+    if (input == NULL)
+    {
+        printf("Could not open file.\n");
+        return 1;
+    }
+
+    FILE *output = fopen(argv[2], "w");
+    if (output == NULL)
+    {
+        printf("Could not open file.\n");
+        return 1;
+    }
+
+    float factor = atof(argv[3]);
+
+    // TODO: Copy header from input file to output file
+    uint8_t header[HEADER_SIZE];
+
+    fread(header, HEADER_SIZE, 1, input);
+    fwrite(header, HEADER_SIZE,1, output);
+
+
+    // TODO: Read samples from input file and write updated data to output file
+    uint16_t buffer;
+    while(fread(&buffer, sizeof(int16_t), 1, input))
+    {
+        buffer *= factor;
+
+        fwrite(&buffer, sizeof(int16_t), 1, output);
+    }
+    // Close files
+    fclose(input);
+    fclose(output);
+}

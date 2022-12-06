@@ -43,3 +43,6 @@ if( n!- NULL)
 list->next->next=n;
 ```
 Notice that I am using a if statement to make sure that the node is empty. This is best practice. We also use `->` to express `(*n).next`. I I would like an element to my linked list I need to add `list = n`
+
+
+When we make a linked list, we can user realloc(list, 4 * sizeof(int));

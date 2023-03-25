@@ -67,3 +67,8 @@ Other file pointer commands:
   It is used in image processing and computer vision, particularly within edge detection algortithms where it creates and image emphasising on edges.
  
   I also started working on the recover  problem set. Which is a problem in which I try to recover the JPEGs from a forensic image.
+
+  
+  2023.03.25
+  
+  I also learned to input a text in a file. using the file library.

@@ -60,7 +60,7 @@ Other file pointer commands:
 - feof(): tells if I have read to the end of a file
 - ferror(): indicates whether an error occured in working with a file.
   
-  2022.12.04:
+**2022.12.04:**
   
   Today I was solving the filter problem set. And I came accross a very interesting problem: Sobel Operator.
   
@@ -69,6 +69,22 @@ Other file pointer commands:
   I also started working on the recover  problem set. Which is a problem in which I try to recover the JPEGs from a forensic image.
 
   
-  2023.03.25
+  **2023.03.25**
   
   I also learned to input a text in a file. using the file library.
+  
+  Now I will be working on a practice questions. The first challenge will be "Bottom Up"
+  
+  
+  The learning goals are:
+  - Practice working with images
+  - Learn about metadata
+  - Learn more about how structs can be useful.
+  
+  
+  Each image file (BITMAP) have a headers:
+  - BITMAPFILEHEADER which is 14 bytes long.
+  - BITMAPINFOHEADER which is 40 bytes long.
+  
+  Tasks: edit the metadata so the bitmap's top row is first and the bottom row is last.
+  

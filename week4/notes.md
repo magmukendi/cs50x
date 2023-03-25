@@ -71,7 +71,7 @@ Other file pointer commands:
   
   **2023.03.25**
   
-  **Bottom Up Problem**
+  ## Bottom Up Problem
   
   I also learned to input a text in a file. using the file library.
   
@@ -94,7 +94,7 @@ Other file pointer commands:
   
   
   
-  **License Problem**
+  ## License Problem
   
   Goals:
   
@@ -104,4 +104,27 @@ Other file pointer commands:
   Use valgrind to check for memory leaks
   
   I just completed a license plate related problem. I had to read a file with license plate. Copy them into an array and them print them one by one. 
+  
+  ## Lab 4: Filter-less
+  
+  I easily built a program that filter an image: change it color to sepia or other hue depending on the arg.
+  
+  
+  ## Problem Set 4: Recover
+  
+  
+  I will be working on a program that recovers JPEGs from a forensic image.
+  
+  The first three bytes of JPEGS are 0xff 0xd8 and 0xff.
+  
+  The forth byte is either 0xe0, 0xe1, 0xe2, 0xe3, 0xe4, 0xe5, 0xe6, 0xe7, 0xe8, 0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, or 0xef. or any fourth bytes  that start with `1110`.
+  
+  Usually digital cameras initializa cards with a FAT file system whole "block size" is 512 bytes (B). So a photo of 1MB (1,048,576 B) takes 2048 blocks on the memory card.
+  
+  So what I have to do is looking for JPEGS signature. When I get to find one, I will open a new file and start copying the JPEG content in that new file until it reach another JPEG signature. It will not go ever every single bytesm but will read 412 bytes at a time for efficiency sake.
+  
+  As it was a new memory card most of the slack space (the space without information), will be zeroed.
+  
+  Program requirement. The program should accept only one argument
+  
   

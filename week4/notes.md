@@ -88,3 +88,5 @@ Other file pointer commands:
   
   Tasks: edit the metadata so the bitmap's top row is first and the bottom row is last.
   
+  I was able to modify  the metadata so that the picture that was bottom up could be flipped top down. I had to changeb the BITMAPINFOHEADER's height, That's it.
+  

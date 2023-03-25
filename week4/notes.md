@@ -1,7 +1,5 @@
 # Week 4: Pointers & Hexadecimal
 
-
-
 Hexadecimal:
 
 ## Pointers
@@ -14,14 +12,10 @@ A pointer is a data item whose value is a memory address. the type describes the
 
 I finally understood the pointer explanation.
 
-
-
 ## Malloc
-
 
 We use malloc to dynamically allocate memory. We must always use free() to free up the memory at the end of the program.
 Never use free() for a statically allocated memory and do not use free() twice on a dynamically allocated memory.
-
 
 ## Call stacks
 
@@ -29,8 +23,6 @@ When a function is called it will pushed in the stack. When a function is execut
 
 
 ## File Pointers
-
-
 
 fopen(): for opening a file.
 
@@ -42,8 +34,22 @@ fread(buffer, size, qty, file pointer): This one reads the quantity of units of 
   
 fwrite(buffer, size of(char), 1, pointer file): Helps us write into a pointer file.\
   
+ **REMEMBER**: & provides the address of something stored in memory., * instructs the compiler to go to a location in memory. 
+  
+So if we write our code like this:
+  
+  ```
+  int main(void)
+  {
+    int n = 50;
+    int *p = &n
+    printf("%p\n", p)
+  }
+  ```
+In order to compare two strings we will use `strcmp(stringA,stringB) == 0`. This will return a truthy value.
   
   
+For use to be able to modify a variable within a function, when we make a function call we must input the address of the variable and in the function we go to that address.
 Other file pointer commands:
   
 - fgets(): Reads a full string from a file.
@@ -54,17 +60,10 @@ Other file pointer commands:
 - feof(): tells if I have read to the end of a file
 - ferror(): indicates whether an error occured in working with a file.
   
-  
-  
-  
   2022.12.04:
   
   Today I was solving the filter problem set. And I came accross a very interesting problem: Sobel Operator.
   
-  
   It is used in image processing and computer vision, particularly within edge detection algortithms where it creates and image emphasising on edges.
-  
-  
-  
-  
-  I also started workign on the recover  provblem set. Which is a problem in which I try to recover the JPEGs from a forensic image.
+ 
+  I also started working on the recover  problem set. Which is a problem in which I try to recover the JPEGs from a forensic image.

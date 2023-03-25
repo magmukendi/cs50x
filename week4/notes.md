@@ -71,6 +71,8 @@ Other file pointer commands:
   
   **2023.03.25**
   
+  **Bottom Up Problem**
+  
   I also learned to input a text in a file. using the file library.
   
   Now I will be working on a practice questions. The first challenge will be "Bottom Up"
@@ -89,4 +91,17 @@ Other file pointer commands:
   Tasks: edit the metadata so the bitmap's top row is first and the bottom row is last.
   
   I was able to modify  the metadata so that the picture that was bottom up could be flipped top down. I had to changeb the BITMAPINFOHEADER's height, That's it.
+  
+  
+  
+  **License Problem**
+  
+  Goals:
+  
+  - Practice working with files and file pointers
+  - More work with strings and arrays
+  Debuggin with debug50
+  Use valgrind to check for memory leaks
+  
+  I just completed a license plate related problem. I had to read a file with license plate. Copy them into an array and them print them one by one. 
   

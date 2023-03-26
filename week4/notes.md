@@ -125,6 +125,31 @@ Other file pointer commands:
   
   As it was a new memory card most of the slack space (the space without information), will be zeroed.
   
-  Program requirement. The program should accept only one argument
+  Generat new jpeg file for each images.
+  
+  **Program requirement** 
+  - The program should accept only one argument
+  - If the forensic image cannot be opened the program should return 1.
+  - The generated file should be named ###.jpg. where ### is the 3 digit decimal number, starting with 000 for the first image and counting up.
+  - If the program uses malloc it should not leak any memory
   
   
+  
+  Here is the pseudo code:
+  
+ - Open the forensic file (964 blocks)
+ - Repeat until I reach the end of the card:
+    - Read 512 bytes into a buffer:
+      - If it is the start of a JPEG:
+        - If it is the first JPEG:
+          - create a file a start writing on it
+        - If is not the first JPEG:
+          - increment the file counter
+          - close the previous file
+          - open a new file
+      - If it is not the start of JPEG:
+        - Check if img is not NULL:
+          - continue writing it in the file
+  
+  I spent about 3 months in this question only to realize that I only had to check if the file was not NULL.
+    

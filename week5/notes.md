@@ -1,7 +1,30 @@
 # Week 5
 
+## Queue & Stack
+
+### Queue
+
+Enqueue: adding something in the end of a queue
+Dequeue: Deleting something from a queue
+first in first out (FIFO)
+
+
+### Stack
+
+push: adding something in the top of a stack
+pop: removing it from the top
+
+Opposite of the queue
+LIFO
+
+Pointer:
+
+Malloc: allocate memory
+Realloc: reallocate a memory
+
 
 ## Linked lists
+
 
 We typically use struct to build linked list. Illustration at the code below.
 
